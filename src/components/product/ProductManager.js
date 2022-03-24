@@ -55,3 +55,20 @@ export const deleteProduct = (productId) => {
         },
     })
 }
+
+export const removeProduct = (productId) => {
+    return fetch(`http://localhost:8000/products/${productId}/remove_from_order`, {
+        method: "Delete",
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("BS_token")}`,
+        },
+    })
+}
+export const addProduct = (productId) => {
+    return fetch(`http://localhost:8000/products/${productId}/add_to_order`, {
+        method: "POST",
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("BS_token")}`,
+        }
+    })
+}

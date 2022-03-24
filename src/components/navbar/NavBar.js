@@ -106,7 +106,7 @@ export const NavBar = () => {
                                     currentUser.account_type === 1 ? <Link to="/profile" className="navbar-item">Profile</Link> : ""
                                 }
                                 {
-                                    currentUser.account_type === 1 ? <Link to="/your/cart" className="navbar-item">Cart</Link> : ""
+                                    currentUser.account_type === 1 ? <Link to="/orders/current" className="navbar-item">Cart</Link> : ""
                                 }
                                 {
                                     currentUser.account_type === 2 ? <Link to="/my-products" className="navbar-item">Home</Link> : ""

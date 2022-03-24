@@ -15,3 +15,12 @@ export const deleteOrder = (orderId) => {
         },
     })
 }
+
+export const completeOrder = (orderId) => {
+    return fetch(`http://localhost:8000/orders/${orderId}`, {
+        method: "PUT",
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("BS_token")}`,
+        },
+    })
+}

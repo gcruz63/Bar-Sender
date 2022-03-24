@@ -4,7 +4,7 @@ import { BarSender } from "./BarSender"
 import { ProductForm } from "./product/ProductFrom"
 import { Cart } from "./cart/Cart"
 import { ProductList } from "./product/ProductList"
-
+import { checkoutProduct } from "./cart/CheckoutProducts"
 export const ApplicationViews = () => {
     return <>
         <main style={{
@@ -17,13 +17,15 @@ export const ApplicationViews = () => {
             <Route exact path="/productForm">
                 <ProductForm />
             </Route>
-            <Route exact path="/your/cart">
+            <Route exact path="/orders/current">
                 <Cart />
             </Route>
             <Route exact path="/products">
                 <ProductList />
             </Route>
-
+            <Route exact path="/checkoutProducts">
+                <checkoutProduct />
+            </Route>
         </main>
     </>
 }
